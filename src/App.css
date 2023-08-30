@@ -1,4 +1,4 @@
-.divPrincipal{
+.divPrincipal {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,9 +6,10 @@
   padding: 2em;
   background-color: #9A3B3B;
   overflow: hidden;
+
 }
 
-.divContenedor{
+.divContenedor {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,9 +19,12 @@
   border: 1px solid black;
   background-color: #E2C799;
   gap: 1em;
+  border-radius: 10px;
 }
 
-.divApiInfo{
+.divApiInfo {
+  width: 20%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;

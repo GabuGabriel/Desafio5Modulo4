@@ -4,14 +4,14 @@ import MiApi from './components/MiApi'
 import { useState } from 'react'
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [filtroBuscador, setFiltroBuscador] = useState("");
 
   return (
     <>
       <div className="divPrincipal">
         <div className="divContenedor">
-          <Buscador setSearchTerm={setSearchTerm} /* onChange={handleChange} search={search} */></Buscador>
-          <MiApi searchTerm={searchTerm} > </MiApi>
+          <Buscador setFiltroBuscador={setFiltroBuscador} /* onChange={handleChange} search={search} */></Buscador>
+          <MiApi filtroBuscador={filtroBuscador} > </MiApi>
         </div>
       </div>
     </>

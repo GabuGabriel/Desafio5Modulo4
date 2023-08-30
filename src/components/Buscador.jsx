@@ -1,4 +1,4 @@
-const Buscador = ({ setSearchTerm }) => {
+const Buscador = ({ setFiltroBuscador }) => {
 
     return (
         <>
@@ -7,7 +7,7 @@ const Buscador = ({ setSearchTerm }) => {
            type="text"  
            id="busqueda"
            placeholder="Buscar"
-           onChange={(e) => setSearchTerm(e.target.value)} />
+           onChange={(e) => setFiltroBuscador(e.target.value)} />
         </>
     )
 }
