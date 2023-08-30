@@ -6,6 +6,7 @@
   padding: 2em;
   background-color: #9A3B3B;
   overflow: hidden;
+ 
 
 }
 
@@ -18,8 +19,13 @@
   width: 80%;
   border: 1px solid black;
   background-color: #E2C799;
-  gap: 1em;
+  gap: 2em;
   border-radius: 10px;
+}
+
+.divCard{
+  display: flex;
+  flex-direction: column;
 }
 
 .divApiInfo {

@@ -10,8 +10,13 @@ const App = () => {
     <>
       <div className="divPrincipal">
         <div className="divContenedor">
-          <Buscador setFiltroBuscador={setFiltroBuscador} /* onChange={handleChange} search={search} */></Buscador>
-          <MiApi filtroBuscador={filtroBuscador} > </MiApi>
+          <div className="divBuscador">
+            <Buscador setFiltroBuscador={setFiltroBuscador} /* onChange={handleChange} search={search} */></Buscador>
+          </div>
+
+          <div className="divCard">
+            <MiApi filtroBuscador={filtroBuscador} > </MiApi>
+          </div>
         </div>
       </div>
     </>
