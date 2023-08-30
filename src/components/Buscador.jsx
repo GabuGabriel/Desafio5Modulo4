@@ -1,28 +1,20 @@
 import { useState } from "react"
 
-const Buscador = ({ onChange, search }) => {
+const Buscador = () => {
     const [busqueda, setBusqueda] = useState("")
-
-const dataToLower = (cd) => {
-    return cd.name.toLowerCase().includes(busqueda.toLowerCase())
-} 
 
     return (
         <>
-            <div className="divBuscador">
-                <form class="d-flex" role="search">
-                    <input
-                        class="form-control mb-4"
-                        type="search"
-                        placeholder="Buscar"
-                        aria-label="Search"
-                        value={busqueda}
-                        onChange={(e) => {
-                        setBusqueda(e.target.value);
-                        }}
-                    />
-                </form>
-            </div>
+           <h2>Buscar</h2>
+           <input 
+           type="text"  
+           id="busqueda"
+           placeholder="Buscar"
+           value={busqueda}
+           onChange={(e) => {
+            setBusqueda(e.target.value)
+           }} />
+
         </>
     )
 }

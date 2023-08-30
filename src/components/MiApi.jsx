@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 
 
+const filtroInfo = (cd) => {
+    return cd.name.toLowerCase();
+};
+
+
+
 const MiApi = () => {
     const [info, setInfo] = useState([]);
     const consultarApi = async () => {
@@ -18,7 +24,7 @@ const MiApi = () => {
 
     return (
         <>
-            {info.map((cd, index) => (
+            {info.filter(filtroInfo).map((cd, index) => (
                 <div key={index} className="divApiInfo">
                     <img src={cd.img} alt="picture" />
                     <h1>Nombre: {cd.name}</h1>
