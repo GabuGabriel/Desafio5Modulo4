@@ -1,23 +1,17 @@
 import './App.css'
 import Buscador from './components/Buscador'
 import MiApi from './components/MiApi'
+import { useState } from 'react'
 
-
-const [search, setSearch] = useState("")
-const handleChange = (e) => {
-    setSearch(e.target.value);
-};
-
-
-
-function App() {
+const App = () => {
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <>
       <div className="divPrincipal">
         <div className="divContenedor">
-          <Buscador onChange={handleChange} search={search}></Buscador>
-          <MiApi> </MiApi>
+          <Buscador setSearchTerm={setSearchTerm} /* onChange={handleChange} search={search} */></Buscador>
+          <MiApi searchTerm={searchTerm} > </MiApi>
         </div>
       </div>
     </>

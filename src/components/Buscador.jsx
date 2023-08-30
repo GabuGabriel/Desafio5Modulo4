@@ -1,7 +1,4 @@
-import { useState } from "react"
-
-const Buscador = () => {
-    const [busqueda, setBusqueda] = useState("")
+const Buscador = ({ setSearchTerm }) => {
 
     return (
         <>
@@ -10,11 +7,7 @@ const Buscador = () => {
            type="text"  
            id="busqueda"
            placeholder="Buscar"
-           value={busqueda}
-           onChange={(e) => {
-            setBusqueda(e.target.value)
-           }} />
-
+           onChange={(e) => setSearchTerm(e.target.value)} />
         </>
     )
 }

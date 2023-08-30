@@ -1,13 +1,6 @@
 import { useState, useEffect } from "react";
 
-
-const filtroInfo = (cd) => {
-    return cd.name.toLowerCase();
-};
-
-
-
-const MiApi = () => {
+const MiApi = ({searchTerm}) => {
     const [info, setInfo] = useState([]);
     const consultarApi = async () => {
         const url = "https://digimon-api.vercel.app/api/digimon";
@@ -24,7 +17,7 @@ const MiApi = () => {
 
     return (
         <>
-            {info.filter(filtroInfo).map((cd, index) => (
+            {info.filter(digimon => digimon.name.toLowerCase().includes(searchTerm.toLowerCase())).map((cd, index) => (
                 <div key={index} className="divApiInfo">
                     <img src={cd.img} alt="picture" />
                     <h1>Nombre: {cd.name}</h1>
